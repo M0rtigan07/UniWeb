@@ -1,0 +1,64 @@
+<h1>ESTUDIANTES</h1>
+ 
+  
+    
+<button class="btn-primary " [routerLink]="['/matricula']"  style="margin-bottom:5px;">MATRICULAS</button>
+      <div class="jumbotron">
+
+        <div class="row">
+          <div class="col-md-5">
+            <ul class="list-group" style="margin-bottom:10px;">
+              <li class="list-group-item">
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text bg-white">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" maxlength="9" placeholder="Ingrese un DNI " [formControl]="controlBusqueda" style="background-color: silver;color:black;font-weight:bold" />
+
+                  </div>
+                </div>
+
+              </li>
+              <li class="list-group-item">DNI :{{estudiante.dni}}</li>
+              <li class="list-group-item"> APELLIDOS: {{estudiante.apellidos}}</li>
+              <li class="list-group-item"> NOMBRE :{{estudiante.nombre}}</li>
+            </ul>
+          </div>
+
+
+          <div class="col-md-7" style="margin-bottom:10px;">
+            <ul class="list-group">
+              <li class="list-group-item"> <h3 class="text-center"><i class="glyphicon glyphicon-floppy-disk"></i> Alumno</h3></li>
+              <li class="list-group-item"> <app-formularioEs></app-formularioEs></li>
+            </ul>
+                     
+          </div>
+        </div>
+
+          
+              <h3 class="text-center"><i class="glyphicon glyphicon-list"></i></h3>
+              <table class="table text-center" style="background-color:whitesmoke;">
+                <thead style="letter-spacing:2px;font-weight:bold;font-style:italic">
+                  <tr>
+                    <th>DNI</th>
+                    <th>APELLIDOS</th>
+                   
+                  </tr>
+                </thead>
+                <tbody *ngFor="let e of aEstudiantes">
+                  <tr>
+                    <td>{{e.dni}}</td>
+                    <td>{{e.apellidos}}</td>
+                   
+                  </tr>
+
+                </tbody>
+              </table>
+
+             </div>
+
+
+
